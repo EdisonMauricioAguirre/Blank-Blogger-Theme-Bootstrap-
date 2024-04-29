@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><data:blog.pageTitle/></title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Agregar Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <!-- Estilos personalizados -->
+  <b:skin><![CDATA[
+    /* Agrega tus estilos personalizados aquí */
+  ]]></b:skin>
+  <b:include data='blog' name='all-head-content'/>
+</head>
+<body>
+  <b:section class='main' id='main' showaddelement='yes'/>
+  <!-- Aquí puedes agregar el contenido de tu sección -->
+  
+  <div class="container">
+    <header>
+      <!-- Encabezado -->
+      <h1><data:blog.title/></h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Barra de navegación -->
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><data:blog.title/></a>
+          </li>
+          <!-- Puedes agregar más elementos de navegación aquí -->
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <!-- Contenido principal -->
+      <data:blog.body/>
+    </main>
+    <footer>
+      <!-- Pie de página -->
+      <p>© <data:blog.title/> - Todos los derechos reservados</p>
+    </footer>
+  </div>
+  <!-- Agregar Bootstrap JS (jQuery y Popper.js son necesarios para Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
